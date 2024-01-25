@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "e1e6e220-161c-43a9-b7b8-dca3f664dda0",
+		"name": "Techincal Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4909721"
+	},
+	"item": [
+		{
+			"name": "Genre",
+			"item": [
+				{
+					"name": "LIST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rowsPerPage\" : 3,\n    \"currentPage\" : 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/genre"
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/genre/get"
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"keyword\":\"m\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/genre/search"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/genre/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n    \"name\":\"Drama\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/genre/update"
+					},
+					"response": []
+				},
+				{
+					"name": "ADD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Drama\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/genre/add"
+					},
+					"response": []
+				},
+				{
+					"name": "BULK ADD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"items\": [\"Komedi\",\"Roman\",\"Horor\",\"Aksi\",\"Thriller\",\"Animasi\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/genre/addBulk"
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:2290/genre/get"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "LIST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rowsPerPage\":10,\n    \"currentPage\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/movie"
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rowsPerPage\":5,\n    \"currentPage\":2,\n    \"keyword\": \"Fat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/movie/search"
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/movie/get"
+					},
+					"response": []
+				},
+				{
+					"name": "ADD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"The Godfather\",\n    \"director\":\"Francis Ford Coppola\",\n    \"summary\" : \"Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.\",\n    \"genreIds\":[1]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/movie/add"
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":6,\n    \"title\":\"The Godfather\",\n    \"director\":\"Francis Ford Coppola\",\n    \"summary\" : \"Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.\",\n    \"genreIds\":[2,3]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/movie/update"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/movie/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "SET GENRE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "bba525d898f12e15012"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":9,\n    \"genreId\":1,\n    \"act\":\"add\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:2290/movie/genre/set"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
